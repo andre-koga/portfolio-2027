@@ -12,6 +12,8 @@ Googling and StackOverflow. Shocking, I know.
 
 React + React Router 7 + Vite, hosted on Vercel, using TS under the hood.
 
+Styling with Tailwind, no component library because I wanted to do it manually.
+
 # You should do this too.
 
 Prove to yourself that AI is tool you use and control, not the other way around.
