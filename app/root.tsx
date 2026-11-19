@@ -7,8 +7,12 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { ThemeProvider } from "next-themes";
 import type { Route } from "./+types/root";
 import "./app.css";
+
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,15 +33,23 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="antialiased">
+        <ThemeProvider
+          enableSystem={true}
+          defaultTheme="system"
+          attribute="class"
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -1,18 +1,36 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
-  --font-mono: "Geist Pixel", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    --color-card: hsl(207 97% 12%);
+    --color-background-light: hsl(0 0% 100%);
+    --color-background-dark: hsl(207 95% 8%);
+    --color-background-custom: hsl(187 71% 82%);
+    --color-background-pastel: hsl(279 100% 93%);
+
+    --font-sans:
+        "Manrope", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --font-mono:
+        "Geist Pixel", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-mist-900;
+@layer base {
+    [data-theme="light"] {
+        --color-card: hsl(207 97% 12%);
+    }
+    [data-theme="dark"] {
+        --color-card: hsl(0 0% 96%);
+    }
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+:root[data-theme="light"] {
+    background-color: var(--color-background-light);
+}
+
+:root[data-theme="dark"] {
+    background-color: var(--color-background-dark);
 }

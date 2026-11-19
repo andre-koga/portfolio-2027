@@ -21,22 +21,35 @@ export function Welcome() {
         </header> */}
         <div className="mx-2 sm:mx-10 text-center font-mono text-xl space-y-8">
           <p>
-            Hey there, this is my portfolio website. It is not yet done, I am putting a lot of attention and care into it.
+            Hey there, this is my portfolio website. It is not yet done, I am
+            putting a lot of attention and care into it.
           </p>
           <p>While you're waiting for it to be done, check these links:</p>
           <ul className="space-y-2">
             <li className="hover:underline">
-              <a href="https://github.com/andre-koga" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/andre-koga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Github
               </a>
             </li>
             <li className="hover:underline">
-              <a href="https://www.linkedin.com/in/andrehkoga/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/andrehkoga/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Linkedin
               </a>
             </li>
             <li className="hover:underline">
-              <a href="https://x.com/andrehkoga" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://x.com/andrehkoga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Twitter
               </a>
             </li>
